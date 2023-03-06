@@ -1,6 +1,6 @@
 ---
 - name: new user
-  - hosts: all
+    - hosts: all
 
   tasks:
     - name: add new user
