@@ -6,4 +6,5 @@
     - name: add new user
       hosts: 192.168.205.200
       routeros_command:
-        commands: /user add name {{ user }} password {{ testAWX }} group=read
+        commands: 
+         -/use add name {{ ansible-awx }} password {{ testAWX }} group=read
