@@ -1,0 +1,8 @@
+tasks:
+  - name: run command on remote devices
+    routeros_command:
+      commands: /system routerboard print
+    register: system_print
+
+  - name: debug print
+    debug: var=system_print.stdout_lines
