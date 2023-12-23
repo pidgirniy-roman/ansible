@@ -1,16 +1,13 @@
 ---
-
 - name: Save file from router
   hosts: all
   gather_facts: false
   
   tasks:
-  - name: run command on remote devices
-    hosts: all
+  - name: start command
     routeros_command:
       commands: /system routerboard print
     register: system_print
   
   - name: debug print
-    hosts: all
     debug: var=system_print.stdout_lines
