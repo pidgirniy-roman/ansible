@@ -1,11 +1,11 @@
 ---
-- name: Save file from router
-  hosts: all
-  gather_facts: false
-  tasks:
-    - name: command
-      routeros_command:
-        commands: /system routerboard print
-      register: system_print
-    - name: debug print
-      debug: var=system_print.stdout_lines
+tasks:
+  - name: command
+    hosts: all
+    routeros_command:
+      commands: /system routerboard print
+    register: system_print
+    
+  - name: debug print
+    hosts: all
+    debug: var=system_print.stdout_lines
