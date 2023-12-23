@@ -4,7 +4,7 @@
   gather_facts: false
   tasks:
     - name: Run a command
-      community.routeros.command:
+      routeros.command:
         commands:
           - /system resource print
       register: system_resource_print
