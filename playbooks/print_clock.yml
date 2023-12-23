@@ -1,0 +1,14 @@
+---
+
+- name: print system clock
+  gather_facts: false
+
+  tasks:
+
+    - name: system command
+      routeros_command:
+        commands: /system clock print
+      register: system_print
+
+    - name: debug print
+      debug: var=system_print.stdout_lines
