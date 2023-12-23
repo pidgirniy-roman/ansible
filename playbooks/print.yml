@@ -4,10 +4,10 @@
   gather_facts: false
   
   tasks:
-  - name: start command
+  - name: command
     routeros_command:
       commands: /system routerboard print
     register: system_print
-  
+
   - name: debug print
     debug: var=system_print.stdout_lines
