@@ -5,6 +5,8 @@
   tasks:
     - name: Run a command
       community.routeros.api:
+      password: "{{ ZT!Hg!^#5d9rZn36z4E+ }}"
+      username: "{{ awx }}"
       command: /system resource print
       register: system_resource_print
     - name: Print its output
